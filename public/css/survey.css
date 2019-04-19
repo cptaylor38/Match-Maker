@@ -1,0 +1,70 @@
+body
+{
+    background: linear-gradient(black, crimson 25%);
+}
+
+.content-container
+{
+    background: url('https://svgsilh.com/svg_v2/2402086.svg');
+    background-size: cover;
+}
+
+.jumbotron
+{
+    background: none;
+    color: white;
+    border-bottom: 5px solid black;
+}
+
+.container .question-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container .q-container
+{
+    padding: 20px;
+    width: auto;
+    color: white;
+    font-weight: bolder;
+}
+
+.container .submit-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-container
+{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+a
+{
+    color: white;
+    text-decoration-line: underline;
+}
+
+.footer-container p
+{
+    margin-top: 10px;
+}
+
+label
+{
+    color: white;
+    font-size: 18px;
+}
