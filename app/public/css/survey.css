@@ -1,0 +1,154 @@
+body
+{
+    background: linear-gradient(black, crimson 25%);
+}
+
+.content-container
+{
+    background: url('https://svgsilh.com/svg_v2/2402086.svg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.jumbotron
+{
+    background: none;
+    color: white;
+    font-family: 'Merienda', cursive;
+}
+
+.container .question-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Merienda', cursive;
+}
+
+.container .q-container
+{
+    padding: 20px;
+    width: auto;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Merienda', cursive;
+}
+
+#navButton
+{
+    background: black;
+    color: white;
+}
+
+#navButton:hover
+{
+    background: white;
+    color: black;
+}
+
+.container .submit-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Merienda', cursive;
+}
+
+.footer-container
+{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    margin-top: 100px;
+    font-family: 'Merienda', cursive;
+}
+
+a
+{
+    color: white;
+    text-decoration-line: underline;
+}
+
+.footer-container
+{
+    min-width: 100vw;
+}
+
+.footer-container p
+{
+    margin-top: 10px;
+}
+
+label
+{
+    color: white;
+    font-size: 18px;
+    font-family: 'Merienda', cursive;
+}
+
+#surveySubmit
+{
+    width: 50%;
+    padding: 20px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 'Merienda', cursive;
+}
+
+#surveySubmit:hover
+{
+    background: white;
+    color: crimson;
+    font-family: 'Merienda', cursive;
+}
+
+.content-home
+{
+    background: url('https://svgsilh.com/svg_v2/2402086.svg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.home-footer
+{
+    position: fixed;
+    bottom: 0;
+}
+
+.modal-dialog
+{
+    border: 5px solid black;
+}
+
+.modal-content
+{
+    background: crimson;
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-family: 'Merienda', cursive;
+}
+
+#matchBio
+{   
+    display: block;
+    font-size: 18px;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-width: 80%;
+    margin: auto;
+}
+
+
+
+
+
+

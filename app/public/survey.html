@@ -8,9 +8,10 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/survey.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/survey.css">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 
 </head>
 
@@ -19,14 +20,14 @@
         <div class='container-fluid'>
             <div class="jumbotron">
                 <h1 class="text-center">
-                    <span class="fa fa-fire"></span> Friend Finder</h1>
+                    <span class="fa fa-heart"></span> Match Maker</h1>
                 <hr>
                 <h2 class="text-center">Meet your soulmate.</h2>
                 <br>
                 <div class="text-center">
                     <a href="/">
-                        <button class="btn btn-lg btn-default">
-                            <span class="fa fa-home"></span>
+                        <button class="btn btn-lg btn-default" id='navButton'>
+                            Home
                         </button>
                     </a>
                 </div>
@@ -36,7 +37,7 @@
         <div class='row'>
             <div class='col-lg-12 col-md-12 col-sm-12' id='intro'>
                 <div class='container intro-container'>
-                    <h3 style='text-align: center; color: white'>Tell us about yourself!</h3>
+                    <h3 style='text-align: center; color: white'>Who are you?</h3>
                     <label for="user-name">What's your name?</label>
                     <input type="text" class="form-control" id="user-name">
 
@@ -58,7 +59,7 @@
                     <hr>
                     <div class='container q-container'>
                         <h4> #1. You favor practicality.</h4>
-                        <select id='q1'>
+                        <select class='question' id='q1'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -69,7 +70,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#2. You are creative.</h4>
-                        <select id='q2'>
+                        <select class='question' id='q2'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -80,7 +81,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#3. You are an extrovert.</h4>
-                        <select id='q3'>
+                        <select class='question' id='q3'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -91,7 +92,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#4. You prefer animals over people.</h4>
-                        <select id='q4'>
+                        <select class='question' id='q4'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -102,7 +103,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#5. You enjoy new experiences.</h4>
-                        <select id='q5'>
+                        <select class='question' id='q5'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -113,7 +114,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#6. You are good with money.</h4>
-                        <select id='q6'>
+                        <select class='question' id='q6'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -124,7 +125,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#7. You are brave.</h4>
-                        <select id='q7'>
+                        <select class='question' id='q7'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -135,7 +136,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#8. You have high self-esteem.</h4>
-                        <select id='q8'>
+                        <select class='question' id='q8'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -146,7 +147,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#9. You generally make the first move.</h4>
-                        <select id='q9'>
+                        <select class='question' id='q9'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -157,7 +158,7 @@
                     </div>
                     <div class='container q-container'>
                         <h4>#10. You prefer monogamy.</h4>
-                        <select id='q10'>
+                        <select class='question' id='q10'>
                             <option value='' disabled selected>Your rating:</option>
                             <option value='1'>1 (Strongly disagree)</option>
                             <option value='2'>2</option>
@@ -172,13 +173,33 @@
         <div class='row'>
             <div class='col-lg-12 col-md-12 col-sm-12'>
                 <div class='container submit-container'>
-                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <button type="submit" class="btn btn-primary submit" id='surveySubmit'>Submit</button>
                 </div>
             </div>
         </div>
     </div>
+    <div id="modalHolder" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="modal-title"><strong>We found a match!</strong></h2>
+                    <button type="button" class="close" data-dismiss="modal" id='modalX'>&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchPhoto" src="" alt="Image Not Found" style="max-width: 350px; border-radius: 50px">
+                    <h3>About Me</h3>
+                    <p id="matchBio"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
     <footer class="footer">
-        <div class="container-fluid footer-container">
+        <div class="container survey-footer footer-container">
             <p>
                 <a href="/api/friends">API Friends List</a> |
                 <a href="https://github.com/cptaylor38/friendFinder">Github Repo</a>
@@ -192,53 +213,48 @@
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
     $(".submit").on("click", function (event) {
         event.preventDefault();
 
+        var scoresArray = [];
 
+        for (var i = 1; i < 11; i++) {
+            scoresArray.push($(`#q${i}`).val().trim());
+        }
 
-        // Here we grab the form elements
         var user = {
             userName: $("#user-name").val().trim(),
             photoURL: $("#photo-URL").val().trim(),
             userBio: $("#user-bio").val().trim(),
-            scores: $("#reserve-email").val().trim()
+            scores: scoresArray
         };
 
-        console.log(user);
+        $("#user-name").val("");
+        $("#photo-URL").val("");
+        $("#user-bio").val("");
+        for (var i = 1; i < 11; i++) {
+            $(`#q${i}`).val("");
+        }
 
-        // This line is the magic. It"s very similar to the standard ajax function we used.
-        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-        // depending on if a tables is available or not.
-
-        $.post("/api/survey", user,
+        var currentURL = window.location.origin;
+        $.post(currentURL + "/api/friends", user,
             function (data) {
-
-                // If a table is available... tell user they are booked.
+                var modalHolder = $('#modal-holder');
                 if (data) {
-                    alert("Yay! You are officially booked!");
-                }
+                    $('#matchName').text(data.userName);
+                    $('#matchPhoto').attr('src', data.photoURL);
+                    $('#matchBio').text(data.userBio);
 
-                // If a table is available... tell user they on the waiting list.
+                    $('#modalHolder').modal('toggle');
+                }
                 else {
-                    alert("Sorry you are on the wait list");
+                    $('#matchName').text('Sorry, no matches yet!');
                 }
 
-                // Clear the form when submitting
-                $("#reserve-name").val("");
-                $("#reserve-phone").val("");
-                $("#reserve-email").val("");
-                $("#reserve-unique-id").val("");
+            }
+        );
 
-            });
 
     });
 

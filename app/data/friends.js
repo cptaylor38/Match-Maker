@@ -10,10 +10,10 @@
 
 var usersArray = [
     {
-        userName: "Saima",
-        photoURL: "saima@example.com",
-        userBio: "blah blah blah",
-        scores: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        userName: "Lonely Tree",
+        photoURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lonely_tree_%285446264712%29.jpg/1200px-Lonely_tree_%285446264712%29.jpg",
+        userBio: "I am a tree.",
+        scores: [5, 5, 1, 5, 1, 1, 5, 5, 1, 1]
     }
 ];
 
