@@ -1,7 +1,9 @@
-# friendFinder
+# [Match Maker](https://survey-match-maker.herokuapp.com/survey)
 
-Todos:
-  1. Per Ta response - double check logic to ensure correct functionality. Upon code glance appeared to return most recent match, not correctly assign closest match.
-  2. Update Read me upon completion.
+User Guide:
 
-Tested - logic seemed to fail. Returns most recent addition instead of siphoning through and comparing.
+Initial Home Page - click "Meet Your Match".
+
+Fill out your name, submit a url/link to your image, and a short description of yourself.
+Then answer 10 questions with relevant values explained in the dropdown text.
+Click submit and a modal will generate with the user whose score most closely matched yours. 
