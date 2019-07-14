@@ -11,6 +11,7 @@ module.exports = function (app) {
         var userTotal = 0;
         var match;
         var potentialMatches = [];
+        var currentMatch;
 
         for (var i = 0; i < userScore.length; i++) {
             userTotal += parseInt(userScore[i]);
@@ -27,11 +28,10 @@ module.exports = function (app) {
             potentialMatches.push(newElement);
         });
 
-        var currentMatch;
         for (var i = 0; i < potentialMatches.length; i++) {
-            currentMatch = potentialMatches[i];
-            if (potentialMatches[i].totalDifference > currentMatch.totalDifference) {
-                currentMatch = element;
+            if (!currentMatch) currentMatch = potentialMatches[i]
+            if (potentialMatches[i].totalDifference < currentMatch.totalDifference) {
+                currentMatch = potentialMatches[i];
             }
             match = currentMatch;
         }
