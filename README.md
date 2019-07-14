@@ -1,8 +1,18 @@
-# friendFinder
+# [Match Maker](https://survey-match-maker.herokuapp.com/survey)
 
-A small 'friend finder' app that uses express routing and sql. 
+User Guide:
 
-The first page prompts you with an enter button, and the second leads you to a survey questionnaire.
+Initial Home Page - click "Meet Your Match".
+![Homepage](../home.png)
 
-Upon submit of the questionnaire, you will be matched with the person who has the closest score to you and a modal will be displayed with an image of your match.
+
+Fill out your name, submit a url/link to your image, and a short description of yourself.
+Then answer 10 questions with relevant values explained in the dropdown text.
+
+![Survey](../survey.png)
+
+
+Click submit and a modal will generate with the user whose score most closely matched yours. 
+
+![Modal](../modal.png)
 
