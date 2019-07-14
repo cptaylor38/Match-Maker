@@ -15,5 +15,4 @@ Then answer 10 questions with relevant values explained in the dropdown text.
 
 Click submit and a modal will generate with the user whose score most closely matched yours. 
 
-![Modal example](./app/modal.png)
 
