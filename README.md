@@ -3,6 +3,7 @@
 User Guide:
 
 Initial Home Page - click "Meet Your Match".
+
 ![Homepage](./app/home.png)
 
 
